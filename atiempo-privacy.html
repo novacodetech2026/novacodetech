@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Política de Privacidad — A Tiempo</title>
+  <meta name="description" content="Política de Privacidad y Términos de Servicio de A Tiempo, la app de reservas para salones de belleza y bienestar."/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --rose: #e11d48;
+      --rose-light: #fff1f2;
+      --rose-border: #fecdd3;
+      --navy: #0f0f1a;
+      --body: #4a4a6a;
+      --muted: #8888aa;
+      --border: #ede8f0;
+      --bg: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--navy);
+      background: var(--bg);
+    }
+
+    /* NAV */
+    nav {
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      padding: 0 6vw;
+      height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-icon {
+      width: 32px; height: 32px; border-radius: 9px;
+      background: linear-gradient(135deg, #e11d48, #f43f5e);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .nav-brand { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--navy); }
+    .nav-back {
+      font-size: 0.82rem; color: var(--muted); text-decoration: none;
+      border: 1px solid var(--border); padding: 0.3rem 0.8rem;
+      border-radius: 6px; transition: all 0.2s; font-weight: 500;
+    }
+    .nav-back:hover { color: var(--rose); border-color: var(--rose-border); }
+
+    /* LANG TOGGLE */
+    .lang-toggle {
+      display: flex; gap: 0; border: 1px solid var(--border); border-radius: 7px; overflow: hidden;
+    }
+    .lang-btn {
+      padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 600;
+      cursor: pointer; border: none; background: transparent;
+      color: var(--muted); transition: all 0.15s; font-family: 'DM Sans', sans-serif;
+    }
+    .lang-btn.active { background: var(--rose); color: #fff; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(150deg, #fff1f2 0%, #fff7f7 50%, #fff 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 6vw 48px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--rose-light); color: var(--rose);
+      border: 1px solid var(--rose-border);
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 0.3rem 0.9rem;
+      border-radius: 50px; margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800; color: var(--navy);
+      letter-spacing: -0.025em; margin-bottom: 0.8rem;
+    }
+    .hero p { color: var(--body); font-size: 0.95rem; max-width: 480px; margin: 0 auto; }
+    .updated {
+      display: inline-block; margin-top: 1rem;
+      font-size: 0.78rem; color: var(--muted);
+    }
+
+    /* TABS */
+    .tabs-wrap { border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 60px; z-index: 9; }
+    .tabs { max-width: 760px; margin: 0 auto; display: flex; padding: 0 6vw; }
+    .tab-btn {
+      padding: 1rem 1.5rem; font-size: 0.88rem; font-weight: 600;
+      color: var(--muted); border: none; background: transparent;
+      border-bottom: 2px solid transparent; cursor: pointer;
+      font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+      margin-bottom: -1px;
+    }
+    .tab-btn.active { color: var(--rose); border-bottom-color: var(--rose); }
+    .tab-btn:hover:not(.active) { color: var(--navy); }
+
+    /* CONTENT */
+    .content-wrap { max-width: 760px; margin: 0 auto; padding: 48px 6vw 80px; }
+    .doc-section { display: none; }
+    .doc-section.active { display: block; }
+
+    h2.section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem; font-weight: 800;
+      color: var(--navy); margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-item {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--bg);
+      transition: border-color 0.2s;
+    }
+    .policy-item:hover { border-color: var(--rose-border); }
+    .policy-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 8px;
+      background: var(--rose-light); color: var(--rose);
+      font-size: 0.78rem; font-weight: 800;
+      margin-bottom: 0.7rem;
+    }
+    .policy-item h3 {
+      font-size: 0.95rem; font-weight: 700; color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .policy-item p { font-size: 0.9rem; color: var(--body); line-height: 1.75; }
+
+    /* CONTACT BOX */
+    .contact-box {
+      background: linear-gradient(135deg, var(--rose), #c01337);
+      border-radius: 16px; padding: 2rem;
+      text-align: center; margin-top: 2.5rem;
+    }
+    .contact-box h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
+    .contact-box p { color: rgba(255,255,255,0.8); font-size: 0.88rem; margin-bottom: 1rem; }
+    .contact-box a {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #fff; color: var(--rose);
+      padding: 0.6rem 1.4rem; border-radius: 8px;
+      font-weight: 700; font-size: 0.85rem; text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .contact-box a:hover { transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy); padding: 1.5rem 6vw;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.8rem;
+    }
+    .footer-left { display: flex; align-items: center; gap: 8px; }
+    .footer-icon { width: 26px; height: 26px; border-radius: 7px; background: linear-gradient(135deg, #e11d48, #f43f5e); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; }
+    .footer-brand { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; color: #fff; }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-link { color: rgba(255,255,255,0.5); font-size: 0.78rem; text-decoration: none; }
+    .footer-link:hover { color: var(--rose); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="atiempo.html" class="nav-left">
+    <div class="nav-icon">⏰</div>
+    <span class="nav-brand">A Tiempo</span>
+  </a>
+  <div style="display:flex; align-items:center; gap:1rem;">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('es')" id="btn-es">ES</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+    </div>
+    <a href="index.html" class="nav-back">NOVACODE TECH</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">📋 Documentos legales</div>
+  <h1 id="hero-title">Privacidad & Términos</h1>
+  <p id="hero-desc">Todo lo que necesitas saber sobre cómo protegemos tus datos y las condiciones de uso de A Tiempo.</p>
+  <span class="updated" id="hero-updated">Última actualización: mayo 2026</span>
+</div>
+
+<div class="tabs-wrap">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="setTab('privacy')" id="tab-privacy">🔒 Política de Privacidad</button>
+    <button class="tab-btn" onclick="setTab('terms')" id="tab-terms">📄 Términos de Servicio</button>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- PRIVACY ES -->
+  <div class="doc-section active" id="privacy-es">
+    <h2 class="section-title">Política de Privacidad</h2>
+
+    <div class="policy-item">
+      <div class="policy-num">1</div>
+      <h3>Información que recopilamos</h3>
+      <p>Recopilamos tu nombre, correo, teléfono y ubicación para conectarte con negocios de belleza y bienestar.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">2</div>
+      <h3>Uso de tus datos</h3>
+      <p>Usamos tu información para gestionar reservas, mostrarte negocios cercanos y mejorar tu experiencia dentro de la app.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">3</div>
+      <h3>Servicios de terceros</h3>
+      <p>Trabajamos con proveedores como Supabase (datos y autenticación), RevenueCat (pagos de suscripción de negocios), OpenAI (asistente de belleza) y Google Maps (ubicación). Cada uno procesa datos según sus propias políticas.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">4</div>
+      <h3>Ubicación</h3>
+      <p>Tu ubicación se usa únicamente para mostrarte negocios cercanos. Puedes desactivarla en cualquier momento desde la configuración de tu dispositivo.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">5</div>
+      <h3>Tus derechos</h3>
+      <p>Puedes editar o eliminar tu cuenta y todos tus datos desde <strong>Perfil → Eliminar mi cuenta</strong> dentro de la app.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">6</div>
+      <h3>Pagos</h3>
+      <p>Los pagos por servicios se realizan en el local. A Tiempo no procesa pagos de servicios dentro de la app.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">7</div>
+      <h3>Contacto</h3>
+      <p>Para dudas sobre privacidad, escríbenos a <strong>soporte@atiempo.do</strong> o a <strong>info@novacodetech.com</strong>.</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>¿Tienes preguntas sobre tu privacidad?</h3>
+      <p>Nuestro equipo responde en menos de 48 horas.</p>
+      <a href="mailto:info@novacodetech.com">✉ info@novacodetech.com</a>
+    </div>
+  </div>
+
+  <!-- PRIVACY EN -->
+  <div class="doc-section" id="privacy-en">
+    <h2 class="section-title">Privacy Policy</h2>
+
+    <div class="policy-item">
+      <div class="policy-num">1</div>
+      <h3>Information we collect</h3>
+      <p>We collect your name, email, phone and location to connect you with beauty and wellness businesses.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">2</div>
+      <h3>Use of your data</h3>
+      <p>We use your information to manage bookings, show nearby businesses and improve your experience in the app.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">3</div>
+      <h3>Third-party services</h3>
+      <p>We work with providers such as Supabase (data and authentication), RevenueCat (business subscription payments), OpenAI (beauty assistant) and Google Maps (location). Each processes data under its own policies.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">4</div>
+      <h3>Location</h3>
+      <p>Your location is only used to show nearby businesses. You can turn it off any time from your device settings.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">5</div>
+      <h3>Your rights</h3>
+      <p>You can edit or delete your account and all your data from <strong>Profile → Delete my account</strong> inside the app.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">6</div>
+      <h3>Payments</h3>
+      <p>Service payments are made in person. A Tiempo does not process service payments inside the app.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">7</div>
+      <h3>Contact</h3>
+      <p>For privacy questions, write to <strong>support@atiempo.do</strong> or <strong>info@novacodetech.com</strong>.</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Questions about your privacy?</h3>
+      <p>Our team responds within 48 hours.</p>
+      <a href="mailto:info@novacodetech.com">✉ info@novacodetech.com</a>
+    </div>
+  </div>
+
+  <!-- TERMS ES -->
+  <div class="doc-section" id="terms-es">
+    <h2 class="section-title">Términos de Servicio</h2>
+
+    <div class="policy-item">
+      <div class="policy-num">1</div>
+      <h3>Uso del servicio</h3>
+      <p>A Tiempo conecta clientes con negocios de belleza y bienestar. Debes ser mayor de edad para usar la app.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">2</div>
+      <h3>Reservas</h3>
+      <p>Las reservas están sujetas a confirmación del negocio. El pago se realiza en el local — A Tiempo no cobra por los servicios.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">3</div>
+      <h3>Política de cancelación</h3>
+      <p>Puedes cancelar sin costo hasta 2 horas antes de tu cita. Cancelaciones tardías se envían como solicitud al negocio.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">4</div>
+      <h3>Responsabilidades del negocio</h3>
+      <p>Los negocios son responsables de la calidad de sus servicios, sus precios y el cumplimiento de las citas confirmadas.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">5</div>
+      <h3>Suscripciones de negocios</h3>
+      <p>Los negocios disfrutan de 7 días de prueba gratis. Luego, las suscripciones se cobran mensualmente y pueden cancelarse en cualquier momento.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">6</div>
+      <h3>Conducta</h3>
+      <p>No se permite contenido ofensivo ni uso fraudulento de la plataforma. NOVACODE TECH se reserva el derecho de suspender cuentas que violen estas condiciones.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">7</div>
+      <h3>Cambios</h3>
+      <p>Podemos actualizar estos términos. Te notificaremos de cambios importantes mediante la app o por correo electrónico.</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>¿Dudas sobre los términos?</h3>
+      <p>Estamos disponibles para aclarar cualquier punto.</p>
+      <a href="mailto:info@novacodetech.com">✉ info@novacodetech.com</a>
+    </div>
+  </div>
+
+  <!-- TERMS EN -->
+  <div class="doc-section" id="terms-en">
+    <h2 class="section-title">Terms of Service</h2>
+
+    <div class="policy-item">
+      <div class="policy-num">1</div>
+      <h3>Use of the service</h3>
+      <p>A Tiempo connects clients with beauty and wellness businesses. You must be of legal age to use the app.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">2</div>
+      <h3>Bookings</h3>
+      <p>Bookings are subject to business confirmation. Payment is made in person — A Tiempo does not charge for services.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">3</div>
+      <h3>Cancellation policy</h3>
+      <p>You can cancel for free up to 2 hours before your appointment. Late cancellations are sent as a request to the business.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">4</div>
+      <h3>Business responsibilities</h3>
+      <p>Businesses are responsible for the quality of their services, their prices and honoring confirmed appointments.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">5</div>
+      <h3>Business subscriptions</h3>
+      <p>Businesses enjoy a 7-day free trial. After that, subscriptions are billed monthly and can be cancelled any time.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">6</div>
+      <h3>Conduct</h3>
+      <p>Offensive content or fraudulent use of the platform is not allowed. NOVACODE TECH reserves the right to suspend accounts that violate these terms.</p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-num">7</div>
+      <h3>Changes</h3>
+      <p>We may update these terms. We'll notify you of important changes through the app or by email.</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Questions about the terms?</h3>
+      <p>We're available to clarify any point.</p>
+      <a href="mailto:info@novacodetech.com">✉ info@novacodetech.com</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-left">
+    <div class="footer-icon">⏰</div>
+    <span class="footer-brand">A Tiempo · by NOVACODE TECH LLC</span>
+  </div>
+  <a href="atiempo.html" class="footer-link">← Volver a A Tiempo</a>
+  <span class="footer-copy">© 2026 NOVACODE TECH LLC. Todos los derechos reservados.</span>
+</footer>
+
+<script>
+  let currentLang = 'es';
+  let currentTab = 'privacy';
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('hero-title').textContent = lang === 'es' ? 'Privacidad & Términos' : 'Privacy & Terms';
+    document.getElementById('hero-desc').textContent = lang === 'es'
+      ? 'Todo lo que necesitas saber sobre cómo protegemos tus datos y las condiciones de uso de A Tiempo.'
+      : 'Everything you need to know about how we protect your data and the terms of use of A Tiempo.';
+    document.getElementById('hero-updated').textContent = lang === 'es' ? 'Última actualización: mayo 2026' : 'Last updated: May 2026';
+    document.getElementById('tab-privacy').textContent = lang === 'es' ? '🔒 Política de Privacidad' : '🔒 Privacy Policy';
+    document.getElementById('tab-terms').textContent = lang === 'es' ? '📄 Términos de Servicio' : '📄 Terms of Service';
+    showSection();
+  }
+
+  function setTab(tab) {
+    currentTab = tab;
+    document.getElementById('tab-privacy').classList.toggle('active', tab === 'privacy');
+    document.getElementById('tab-terms').classList.toggle('active', tab === 'terms');
+    showSection();
+  }
+
+  function showSection() {
+    document.querySelectorAll('.doc-section').forEach(s => s.classList.remove('active'));
+    document.getElementById(`${currentTab}-${currentLang}`).classList.add('active');
+  }
+</script>
+</body>
+</html>
