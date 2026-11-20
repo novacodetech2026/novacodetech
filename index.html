@@ -27,6 +27,47 @@ body{background-image:radial-gradient(ellipse at 15% 8%,rgba(40,91,181,.12),tran
 @media(max-width:850px){.workflow{grid-template-columns:repeat(2,1fr)}.workflow-item:nth-child(2):after{display:none}.showcase{grid-template-columns:1fr}}@media(max-width:520px){.workflow{grid-template-columns:1fr}.workflow-item:after{display:none}.ticker-inner{justify-content:flex-start;gap:10px 18px}.showcase-box{padding:20px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal-v2{opacity:1;transform:none}}
 </style>
+<style>
+/* Premium visual system — original Novacode identity, informed by leading SaaS design patterns */
+:root{--bg:#070c17;--panel:#121d2d;--ink:#f8fbff;--muted:#b2c0d2;--blue:#80adff;--line:#34445b;--green:#77dcc1}
+body{background:#070c17;color:var(--ink);font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{color:#f8fbff}h1,h2{font-weight:800}p{line-height:1.75}
+nav{max-width:1240px;height:84px}.brand{letter-spacing:-.025em}
+.hero{background:radial-gradient(ellipse at 75% 28%,rgba(42,91,168,.26),transparent 52%),linear-gradient(150deg,#090e1a,#0b1524 75%,#0c1829)}
+.hero-grid{padding-top:112px;padding-bottom:118px;gap:75px}
+.hero h1{font-size:clamp(44px,5.2vw,74px);line-height:1.09;letter-spacing:-.055em;max-width:690px}
+.lead{color:#c1cfe1;line-height:1.78;font-size:18px}
+.eyebrow{letter-spacing:.14em;color:#80c9ff}
+.gradient{background:linear-gradient(95deg,#d5e6ff,#8ab6ff 55%,#b8e6dc);background-clip:text}
+.btn{border-radius:10px;box-shadow:none}.btn:not(.ghost){background:#dceaff;color:#081327;border-color:#dceaff}.btn:not(.ghost):hover{background:#fff;border-color:#fff}
+.btn.ghost{border-color:#6b7d98;background:rgba(255,255,255,.025)}
+.section{padding:112px 0}.section h2{max-width:840px;font-size:clamp(34px,3.8vw,52px);line-height:1.14}
+.section-intro{font-size:17px;color:#b6c5d8}
+.alt{background:#101a2a;border-color:#26354a}
+.card,.showcase-box,.workflow-item,.contact form{background:#152235;border-color:#33465f;box-shadow:none}
+.card{padding:34px}.card:hover,.showcase-box:hover{border-color:#6d8bb5}
+.card h3,.workflow-item h3{letter-spacing:-.02em}
+.card p,.workflow-item p,.showcase-box p,.step p{color:#b7c7da}
+.preview{background:linear-gradient(150deg,#1b2c44,#101b2d);border-color:#5a7194;box-shadow:0 32px 100px #0008;transform:none}
+.preview-top{border-color:#3b4b64}
+.bubble.agent{background:#293c56}.bubble.user{background:#365e9a}
+.demo-controls button{background:#1c304c;border-color:#456080}
+.dashboard{background:#111c2d;border-color:#40526c}.metric{background:#213149}
+.ticker{background:#0c1523;border-color:#28374e}.ticker-inner{padding:21px 24px}
+.ticker-inner strong{color:#c8d9ed;font-weight:600}
+.ticker-inner span:before{color:#78d9be}
+.workflow-item{background:#17263b}
+.workflow-item:not(:last-child):after{background:#2a3e58;color:#d3e3f7}
+.showcase-box{background:#15253a}
+.visual-row{background:#263851}
+.bar-track{background:#30425b}
+.bar-fill{background:linear-gradient(90deg,#699cff,#8bc9e6)}
+.contact form{background:#18283c}
+.field input,.field select,.field textarea{background:#0d1828;border-color:#52647d}
+.faq details{border-color:#34445a}
+footer{background:#080e1a;border-color:#28374a}
+@media(max-width:850px){.hero-grid{padding-top:64px;padding-bottom:76px;gap:48px}.section{padding:78px 0}.hero h1{font-size:clamp(42px,9vw,62px)}}
+</style>
 </head>
 <body>
 <header class="hero"><nav><a class="brand" href="#" aria-label="Novacode Tech home"><img src="novacode-logo.png" alt=""><span>NOVACODE TECH</span></a><div class="links"><a href="#features" data-i="navFeatures">Features</a><a href="#demo" data-i="navDemo">Demo</a><a href="#how" data-i="navHow">How it works</a><a class="btn nav-cta" href="#contact" data-i="navContact">Get in touch</a><button class="lang" id="lang" type="button" aria-label="Change language">ES</button></div></nav>
