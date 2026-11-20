@@ -197,11 +197,110 @@ h1,h2,h3,p,.brand,.bubble,.appt,.visual-row{overflow-wrap:anywhere}
 #platform .platform-window img{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important}
 #platform .platform-shot{min-width:0;overflow:hidden}
 @media(max-width:700px){#platform .platform-gallery{grid-template-columns:minmax(0,1fr)!important}#platform .platform-shot{padding:10px!important}#platform .platform-window{border-radius:8px}}
-</style></head>
+</style><style>
+/* Novacode 2026 brand system — editorial SaaS aesthetic */
+:root{--bg:#080e17;--ink:#f7f7f2;--muted:#b7c5d5;--line:#2c435c;--blue:#94c4ff;--green:#a2ead4}
+body{background:#080e17;color:#f7f7f2}
+h1,h2,h3,.brand{font-family:Manrope,sans-serif}
+.hero{background:radial-gradient(ellipse at 76% 12%,rgba(35,98,171,.24),transparent 45%),#080e17}
+nav{max-width:1240px;border-bottom:1px solid rgba(160,198,234,.15);height:88px}
+.brand{letter-spacing:.075em;font-size:15px}
+.brand img{border-radius:12px}
+.links{gap:25px}
+.links a:not(.btn){font-weight:600;color:#c7d4e4}
+.links .nav-cta{border-radius:100px}
+.hero-grid{padding-top:100px;padding-bottom:70px;gap:76px}
+.hero h1{font-size:clamp(48px,5.7vw,82px);line-height:1.04;letter-spacing:-.066em;max-width:760px}
+.hero h1 .gradient{background:linear-gradient(105deg,#e9f6ff,#92c3fa 55%,#8ee6d2);background-clip:text}
+.hero .eyebrow,.flow-head .eyebrow{color:#91d9d4;font-size:11px;letter-spacing:.21em}
+.hero .lead{max-width:540px;color:#c2ccda}
+.hero .actions .btn{border-radius:100px;padding:15px 25px}
+.hero .fine{letter-spacing:.025em}
+.preview{border-radius:23px;background:linear-gradient(155deg,#172a43,#0e192a);border:1px solid #4b6683;box-shadow:0 28px 80px #0008}
+.preview-top{gap:14px}
+.avatar{background:#c7e2ff;color:#14253a;border-radius:12px}
+.demo-controls button{border-radius:100px;padding:10px 14px}
+.flow-wrap{padding-top:28px;padding-bottom:94px}
+.flow-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-top:1px solid #31465c;padding-top:29px}
+.flow-head p{margin:0;color:#c0cddd;font-size:14px}
+.brand-flow{display:grid;grid-template-columns:minmax(0,1fr) 75px minmax(0,1.35fr) 75px minmax(0,1.1fr);align-items:center;gap:0;padding:40px 0 0}
+.flow-node,.flow-core{border-radius:17px;padding:22px;min-width:0;position:relative}
+.flow-node{border:1px solid #3a5672;background:#13253a}
+.flow-kicker{display:block;color:#8bd5d2;font-size:10px;font-weight:800;letter-spacing:.12em;margin-bottom:13px}
+.flow-node b,.flow-core b{display:block;font-size:clamp(15px,1.65vw,23px);letter-spacing:-.04em;line-height:1.25}
+.flow-node small,.flow-core small{display:block;margin-top:9px;color:#b5c7da;font-size:12px}
+.flow-core{padding:32px 20px;text-align:center;border:1px solid #8ebbe6;background:radial-gradient(circle at 50% 10%,#244e78,#13253d 65%,#0c1b2b);box-shadow:0 0 0 8px #17355244}
+.flow-core b{letter-spacing:.06em}
+.flow-core b span{color:#a3dded}
+.flow-orbit{display:grid;place-items:center;width:60px;height:60px;margin:0 auto 16px;border:1px solid #80b6e5;border-radius:50%;font-size:36px;color:#b9e7ff}
+.flow-wire{display:flex;flex-direction:column;gap:13px;align-items:stretch}
+.flow-wire span{height:1px;background:linear-gradient(90deg,#375c81,#8bc3ec);transform:rotate(0)}
+.flow-wire span:nth-child(1){transform:translateY(6px) rotate(12deg)}
+.flow-wire span:nth-child(3){transform:translateY(-6px) rotate(-12deg)}
+.flow-wire-right span{background:linear-gradient(90deg,#8bc3ec,#375c81)}
+.flow-stack{display:grid;gap:9px}
+.flow-stack .flow-node{padding:13px 17px}
+.flow-stack .flow-kicker{margin-bottom:5px}
+.flow-stack .flow-node b{font-size:16px}
+.flow-stack .flow-node small{margin-top:2px}
+.ticker{background:#101d2c;border-color:#304359}
+.ticker-inner{gap:20px 45px}
+.ticker-inner strong{color:#d8e6f2}
+.section{padding-top:105px;padding-bottom:105px}
+.section h2{letter-spacing:-.052em;line-height:1.1;max-width:850px}
+.card,.workflow-item,.showcase-box{border-radius:16px;background:#132236;border-color:#344a62}
+.card .num{font-size:12px;letter-spacing:.15em}
+.card h3{font-size:21px}
+.platform-gallery{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+.platform-shot{background:#121f31;border:1px solid #3a516b;border-radius:17px}
+.platform-window{background:#e9edf5}
+.platform-shot h3{font-size:18px}
+.platform-shot p{color:#b4c7dc}
+.alt{background:#0e1928}
+footer{background:#070d15}
+.mobile-menu-toggle{display:none;border:1px solid #3a516b;background:#142438;color:#fff;border-radius:11px;min-width:44px;min-height:44px;font-size:20px}
+@media(max-width:850px){
+ .hero-grid{gap:35px;padding-top:62px;padding-bottom:45px}
+ .flow-wrap{padding-bottom:60px}
+ .brand-flow{grid-template-columns:minmax(0,1fr);gap:12px;padding-top:22px}
+ .flow-wire{height:22px;flex-direction:row;justify-content:center;gap:10px}
+ .flow-wire span{height:100%;width:1px;background:#709dc7;transform:none!important}
+ .flow-core{padding:23px}
+ .flow-stack{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+ .flow-stack .flow-node{padding:12px}
+ .flow-stack .flow-node b{font-size:13px}
+ .flow-stack .flow-node small{font-size:11px}
+ .flow-head{display:block}
+ .flow-head p{margin-top:8px}
+}
+@media(max-width:600px){
+ nav{position:relative;flex-wrap:nowrap!important;min-height:72px}
+ nav .links{margin-left:auto;gap:7px}
+ nav .links .lang{display:inline-flex;align-items:center;justify-content:center}
+ .mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+ nav .links a{display:none!important}
+ nav.menu-open .links{position:absolute;left:12px;right:12px;top:calc(100% - 2px);z-index:30;padding:15px;display:flex;flex-direction:column;align-items:stretch;gap:0;background:#14253a;border:1px solid #4b6380;border-radius:13px;box-shadow:0 18px 35px #0009}
+ nav.menu-open .links a,nav.menu-open .links .nav-cta{display:flex!important;min-height:44px;align-items:center;padding:9px 12px}
+ nav.menu-open .links .lang{align-self:flex-start}
+ nav.menu-open .mobile-menu-toggle{position:relative;z-index:31}
+ .hero h1{font-size:clamp(36px,10vw,48px)!important}
+ .hero-grid{padding-top:48px!important}
+ .flow-wrap{padding-top:8px;padding-bottom:50px}
+ .flow-head{padding-top:20px}
+ .flow-stack{grid-template-columns:minmax(0,1fr)}
+ .flow-stack .flow-node{padding:14px 16px}
+ .flow-stack .flow-node b{font-size:16px}
+ .flow-node,.flow-core{border-radius:14px}
+ .section{padding:60px 0!important}
+ .platform-gallery{grid-template-columns:minmax(0,1fr)}
+ .platform-shot:first-child{grid-row:auto}
+}
+</style>
+</head>
 <body>
-<header class="hero"><nav><a class="brand" href="#" aria-label="Novacode Tech home"><img src="novacode-logo.png" alt=""><span>NOVACODE TECH</span></a><div class="links"><a href="#features" data-i="navFeatures">Features</a><a href="#demo" data-i="navDemo">Demo</a><a href="#how" data-i="navHow">How it works</a><a class="btn nav-cta" href="#contact" data-i="navContact">Get in touch</a><button class="lang" id="lang" type="button" aria-label="Change language">ES</button></div></nav>
+<header class="hero"><nav><a class="brand" href="#" aria-label="Novacode Tech home"><img src="novacode-logo.png" alt=""><span>NOVACODE TECH</span></a><div class="links"><a href="#features" data-i="navFeatures">Features</a><a href="#demo" data-i="navDemo">Demo</a><a href="#how" data-i="navHow">How it works</a><a class="btn nav-cta" href="#contact" data-i="navContact">Get in touch</a><button class="lang" id="lang" type="button" aria-label="Change language">ES</button><button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button></div></nav>
 <div class="wrap hero-grid"><div><div class="eyebrow" data-i="eyebrow">AI automation for service businesses</div><h1 data-i="headline">Your business, <span class="gradient">always available.</span></h1><p class="lead" data-i="lead">Meet your bilingual AI receptionist. Answer customer questions, check availability and help book appointments — while your team focuses on delivering great service.</p><div class="actions"><a class="btn" href="#contact" data-i="heroCta">Request a demo →</a><a class="btn ghost" href="#demo" data-i="heroSecondary">See it in action</a></div><p class="fine" data-i="heroFine">Built for salons, spas, barbershops and appointment-based teams.</p></div>
-<div class="preview" id="demo"><div class="preview-top"><div class="avatar">N</div><div><strong>Novacode AI Receptionist</strong><div class="status" data-i="demoLabel">● Interactive sample conversation</div></div></div><div class="chat" id="chat" aria-live="polite"></div><div class="demo-controls"><button type="button" data-scenario="hours" data-i="demoHours">Business hours</button><button type="button" data-scenario="service" data-i="demoService">Services</button><button type="button" data-scenario="booking" data-i="demoBooking">Appointment</button></div><p class="note" data-i="demoNote">Illustrative demo only. No real appointment is created.</p></div></div></header><div class="ticker"><div class="ticker-inner"><span>✦ <strong data-i="t1">AI-assisted replies</strong></span><span>✦ <strong data-i="t2">English + Español</strong></span><span>✦ <strong data-i="t3">Availability checks</strong></span><span>✦ <strong data-i="t4">Business dashboard</strong></span></div></div>
+<div class="preview" id="demo"><div class="preview-top"><div class="avatar">N</div><div><strong>Novacode AI Receptionist</strong><div class="status" data-i="demoLabel">● Interactive sample conversation</div></div></div><div class="chat" id="chat" aria-live="polite"></div><div class="demo-controls"><button type="button" data-scenario="hours" data-i="demoHours">Business hours</button><button type="button" data-scenario="service" data-i="demoService">Services</button><button type="button" data-scenario="booking" data-i="demoBooking">Appointment</button></div><p class="note" data-i="demoNote">Illustrative demo only. No real appointment is created.</p></div></div><div class="wrap flow-wrap"><div class="flow-head"><span class="eyebrow" data-i="flowTag">CONNECTED BY DESIGN</span><p data-i="flowDescription">From the first message to a confirmed appointment. One seamless experience.</p></div><div class="brand-flow" aria-label="Novacode AI connects customer messages, scheduling and business operations"><div class="flow-node flow-in"><span class="flow-kicker">01 / CONNECT</span><b>WhatsApp</b><small>Customer messages</small></div><div class="flow-wire" aria-hidden="true"><span></span><span></span><span></span></div><div class="flow-core"><span class="flow-orbit">✳</span><b>NOVACODE<span> AI</span></b><small>Intelligent receptionist</small></div><div class="flow-wire flow-wire-right" aria-hidden="true"><span></span><span></span><span></span></div><div class="flow-stack"><div class="flow-node"><span class="flow-kicker">02 / UNDERSTAND</span><b>Conversations</b><small>English + Español</small></div><div class="flow-node"><span class="flow-kicker">03 / ORGANIZE</span><b>Appointments</b><small>Always in sync</small></div><div class="flow-node"><span class="flow-kicker">04 / MANAGE</span><b>Dashboard</b><small>One clear workspace</small></div></div></div></div></header><div class="ticker"><div class="ticker-inner"><span>✦ <strong data-i="t1">AI-assisted replies</strong></span><span>✦ <strong data-i="t2">English + Español</strong></span><span>✦ <strong data-i="t3">Availability checks</strong></span><span>✦ <strong data-i="t4">Business dashboard</strong></span></div></div>
 <main><section class="section wrap" id="features"><div class="eyebrow" data-i="featuresTag">One smart front desk</div><h2 data-i="featuresTitle">Less back-and-forth. More time for your business.</h2><p class="section-intro" data-i="featuresIntro">Give customers fast, helpful answers and keep appointment requests organized.</p><div class="cards"><article class="card"><div class="num">01 / AI</div><h3 data-i="f1Title">Instant answers</h3><p data-i="f1Text">Your agent responds to common questions about services, business hours and appointment requests.</p></article><article class="card"><div class="num">02 / EN + ES</div><h3 data-i="f2Title">Bilingual by design</h3><p data-i="f2Text">Serve English- and Spanish-speaking customers with natural conversations.</p></article><article class="card"><div class="num">03 / BOOKINGS</div><h3 data-i="f3Title">Availability-aware booking</h3><p data-i="f3Text">The agent checks your configured schedule before booking, helping avoid conflicting appointments.</p></article></div></section>
 <section class="section alt"><div class="wrap split"><div><div class="eyebrow" data-i="dashTag">Your business, in control</div><h2 data-i="dashTitle">A clear view of every appointment.</h2><p class="section-intro" data-i="dashText">Manage appointments, services and customer information in one dedicated business dashboard. Your team stays in control; Novacode handles technical channel setup.</p><a class="btn ghost" href="#contact" data-i="dashCta">See the platform →</a></div><div class="dashboard" aria-label="Illustrative dashboard preview"><div class="dash-head"><strong data-i="dashSample">Dashboard preview</strong><span class="pill" data-i="sample">Sample data</span></div><div class="dash-grid"><div class="metric"><b>12</b><span data-i="metric1">Appointments</span></div><div class="metric"><b>8</b><span data-i="metric2">Customers</span></div><div class="metric"><b>5</b><span data-i="metric3">Services</span></div></div><div class="appt"><span data-i="appt1">Haircut · 10:00 AM</span><span class="pill" data-i="confirmed">Confirmed</span></div><div class="appt"><span data-i="appt2">Blowout · 1:30 PM</span><span class="pill" data-i="confirmed2">Confirmed</span></div><div class="appt"><span data-i="appt3">Massage · 3:00 PM</span><span class="pill" data-i="pending">Pending</span></div><p class="note" data-i="dashDisclaimer">Conceptual preview; not connected to live customer data.</p></div></div></section>
 <section class="section wrap reveal-v2" id="journey"><div class="eyebrow" data-i="journeyTag">What happens behind the scenes</div><h2 data-i="journeyTitle">From a message to an organized appointment.</h2><p class="section-intro" data-i="journeyIntro">Your receptionist follows a clear process and checks your business rules before confirming a reservation.</p><div class="workflow"><div class="workflow-item"><div class="ico">💬</div><h3 data-i="j1Title">Customer reaches out</h3><p data-i="j1Text">A customer asks about a service or an available time.</p></div><div class="workflow-item"><div class="ico">✨</div><h3 data-i="j2Title">AI gathers details</h3><p data-i="j2Text">The agent asks for the service, preferred date and necessary details.</p></div><div class="workflow-item"><div class="ico">📅</div><h3 data-i="j3Title">Schedule is checked</h3><p data-i="j3Text">The system validates business hours and availability.</p></div><div class="workflow-item"><div class="ico">✓</div><h3 data-i="j4Title">Booking is recorded</h3><p data-i="j4Text">A confirmation is given only after the booking succeeds.</p></div></div></section>
@@ -218,7 +317,9 @@ en:{navFeatures:"Features",navDemo:"Demo",navHow:"How it works",navContact:"Get 
 es:{navFeatures:"Funciones",navDemo:"Demo",navHow:"Cómo funciona",navContact:"Contáctanos",eyebrow:"Automatización con IA para negocios",headline:'Tu negocio, <span class="gradient">siempre disponible.</span>',lead:"Conoce tu recepcionista de inteligencia artificial bilingüe. Responde preguntas, consulta disponibilidad y ayuda a reservar citas mientras tu equipo se concentra en atender clientes.",heroCta:"Solicitar demo →",heroSecondary:"Ver demostración",heroFine:"Para salones, spas, barberías y negocios que trabajan con citas.",demoLabel:"● Conversación de ejemplo interactiva",demoHours:"Horarios",demoService:"Servicios",demoBooking:"Reservar cita",demoNote:"Demostración ilustrativa. No se crea ninguna cita real.",featuresTag:"Una recepción más inteligente",featuresTitle:"Menos mensajes repetitivos. Más tiempo para tu negocio.",featuresIntro:"Ofrece respuestas rápidas y organiza mejor las solicitudes de citas.",f1Title:"Respuestas al instante",f1Text:"El agente responde preguntas frecuentes sobre servicios, horarios y solicitudes de citas.",f2Title:"Bilingüe desde el inicio",f2Text:"Atiende a clientes en español e inglés mediante conversaciones naturales.",f3Title:"Reservas según disponibilidad",f3Text:"El agente consulta el horario configurado antes de reservar para evitar conflictos.",dashTag:"Tú tienes el control",dashTitle:"Todas tus citas, en un solo lugar.",dashText:"Administra citas, servicios y clientes desde un panel dedicado a tu negocio. Novacode se encarga de la configuración técnica de los canales.",dashCta:"Conocer la plataforma →",dashSample:"Vista previa del panel",sample:"Datos de ejemplo",metric1:"Citas",metric2:"Clientes",metric3:"Servicios",appt1:"Corte · 10:00 AM",appt2:"Peinado · 1:30 PM",appt3:"Masaje · 3:00 PM",confirmed:"Confirmada",confirmed2:"Confirmada",pending:"Pendiente",dashDisclaimer:"Vista conceptual; no está conectada a datos reales de clientes.",howTag:"Configuración sencilla",howTitle:"De la configuración a conversaciones inteligentes.",s1Title:"Cuéntanos sobre tu negocio",s1Text:"Comparte servicios, horarios y preferencias para reservar.",s2Title:"Configuramos tu agente",s2Text:"Novacode prepara la recepcionista y conecta los canales compatibles para tu negocio.",s3Title:"Administra tus reservas",s3Text:"Consulta citas y actualiza los datos de tu negocio desde el panel.",contactTag:"Hablemos",contactTitle:"¿Listo para tener una recepción más inteligente?",contactText:"Cuéntanos qué necesita tu negocio. Te responderemos con una presentación y los próximos pasos.",name:"Tu nombre",email:"Correo del negocio",business:"Nombre del negocio",message:"¿Qué te gustaría automatizar?",send:"Preparar consulta →",formNote:"Abre tu aplicación de correo con la consulta. Esta web no almacena tus datos.",faqTitle:"Preguntas frecuentes",q1:"¿El agente habla español e inglés?",a1:"Sí. Puede responder en cualquiera de los dos idiomas según la conversación.",q2:"¿Reserva citas automáticamente?",a2:"El agente puede consultar disponibilidad y crear citas mediante el sistema de reservas. Solo confirma cuando el sistema registra la cita correctamente.",q3:"¿Debo configurar las integraciones?",a3:"No. Novacode realiza la configuración técnica de los canales durante el onboarding. Los canales disponibles dependen de tu configuración."}};
 const scenarios={en:{hours:["What time are you open?","I can help with your business hours. Which day would you like to visit?"],service:["Do you offer haircuts?","I can check the services available at this business. Are you looking for a haircut or styling?"],booking:["I'd like to book an appointment.","Of course! What service and date would you prefer? I'll check availability before confirming."]},es:{hours:["¿Cuál es su horario?","Con gusto te ayudo. ¿Qué día te gustaría visitarnos?"],service:["¿Ofrecen cortes de cabello?","Puedo consultar los servicios disponibles. ¿Buscas un corte o un peinado?"],booking:["Quiero reservar una cita.","¡Claro! ¿Qué servicio y fecha prefieres? Consultaré disponibilidad antes de confirmar."]}};
 Object.assign(strings.en,{galleryTag:"INSIDE THE PLATFORM",galleryTitle:"See the workspace behind every booking.",galleryIntro:"Explore the business dashboard, AI receptionist and appointment calendar. Demonstration data shown.",galleryDashTitle:"Business overview",galleryDashText:"Appointments, confirmations and daily activity in one clear view.",galleryAiTitle:"AI receptionist",galleryAiText:"Preview bilingual conversations and appointment assistance.",galleryCalTitle:"Appointment calendar",galleryCalText:"See upcoming reservations and filter by service or status.",galleryNote:"Real platform screenshots with demonstration data.",galleryCta:"Request a guided demo →"});Object.assign(strings.es,{galleryTag:"CONOCE LA PLATAFORMA",galleryTitle:"Conoce la plataforma detrás de cada reserva.",galleryIntro:"Explora el panel del negocio, la recepcionista IA y el calendario de citas con datos de demostración.",galleryDashTitle:"Panel del negocio",galleryDashText:"Citas, confirmaciones y actividad diaria en una sola vista.",galleryAiTitle:"Recepcionista IA",galleryAiText:"Prueba conversaciones bilingües y asistencia para reservar.",galleryCalTitle:"Calendario de citas",galleryCalText:"Consulta las reservas y filtra por servicio o estado.",galleryNote:"Capturas reales de la plataforma con datos de demostración.",galleryCta:"Solicitar una demostración →"});
+Object.assign(strings.en,{flowTag:"CONNECTED BY DESIGN",flowDescription:"From the first message to a confirmed appointment. One seamless experience."});Object.assign(strings.es,{flowTag:"CONECTADO DESDE EL INICIO",flowDescription:"Desde el primer mensaje hasta una cita confirmada. Una experiencia conectada."});
 let language=localStorage.getItem("novacode-language")==="es"?"es":"en";let scenario="booking";
+document.getElementById("mobile-menu-toggle").addEventListener("click",function(){const nav=document.querySelector("header nav");const open=nav.classList.toggle("menu-open");this.setAttribute("aria-expanded",String(open));this.textContent=open?"✕":"☰"});document.querySelectorAll("header nav .links a").forEach(a=>a.addEventListener("click",()=>{document.querySelector("header nav").classList.remove("menu-open");document.getElementById("mobile-menu-toggle").setAttribute("aria-expanded","false");document.getElementById("mobile-menu-toggle").textContent="☰"}));
 function renderChat(){const chat=document.getElementById("chat");chat.replaceChildren();const msgs=scenarios[language][scenario];msgs.forEach((m,i)=>{const div=document.createElement("div");div.className="bubble "+(i?"agent":"user");div.textContent=m;chat.appendChild(div)})}
 function render(){document.documentElement.lang=language;document.querySelectorAll("[data-i]").forEach(el=>{const val=strings[language][el.dataset.i];if(el.dataset.i==="headline")el.innerHTML=val;else el.textContent=val});document.getElementById("lang").textContent=language==="en"?"ES":"EN";renderChat()}
 document.getElementById("lang").addEventListener("click",()=>{language=language==="en"?"es":"en";localStorage.setItem("novacode-language",language);render()});
